@@ -6,9 +6,11 @@ class CalculationsController < ApplicationController
 
   def square
 
-    @numbers = params[:list_of_numbers].gsub(',', '').split.map(&:to_f)
+    @numbers = params[:list_of_numbers]
 
-    @square = @numbers.square
+
+    @square_root = @numbers.square_root
+
 
         render ("square.html.erb")
   end
